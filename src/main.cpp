@@ -37,7 +37,9 @@ int main()
 
 
     // DEFINE SHAPES TO BE DRAWN
-    ClockGUI nClock(140, WINDOW);
+    ClockGUI clockOne(120, 300, 200, WINDOW, 30, 140, 160);
+    ClockGUI clockTwo(220, 700, 500, WINDOW, 200, 60, 80);
+    ClockGUI clockThree(145, 1000, 175, WINDOW, 90, 225, 95);
     //StaticEffect fuzz;
 
 
@@ -104,9 +106,14 @@ int main()
         WINDOW.clear(sf::Color(180, 180, 180));
 
         // UPDATE AND DRAW
-        nClock.updateTime();
-        nClock.drawClock(WINDOW);
-        //fuzz.drawColors(WINDOW);
+        clockOne.updateTime();
+        clockTwo.updateTime();
+        clockThree.updateTime();
+
+        clockOne.drawClock(WINDOW);
+        clockTwo.drawClock(WINDOW);
+        clockThree.drawClock(WINDOW);
+        
 
         // DISPLAY DRAWINGS
         WINDOW.display();
